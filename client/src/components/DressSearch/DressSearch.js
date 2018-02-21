@@ -24,6 +24,10 @@ const DressSearch = props =>
                 <input placeholder="Hip Width (in Inches)" type="text" className="footSize" id="hipWidth" name="hips" onChange={props.handleInputChange}></input>
                 <br/>
 
+        <button className="searchButton" type="submit" onClick={props.handleSearch}>
+            Submit
+        </button>
+
     </div>
 
 export default DressSearch;

@@ -1,5 +1,4 @@
 import React, { Component} from "react";
-import "./Home.css";
 import API from "../../utils/API";
 import Search from "../../components/Search";
 import Sizes from "../../components/Sizes";
@@ -39,18 +38,32 @@ class Home extends Component {
         })
         .catch(err => console.log(err))
     };
+
+    handleSelect = option => {
+        console.log(option);
+        this.setState({
+            type: option
+        })
+
+    };
     
     handleInputChange = event => {
+        console.log(event.target);
         const { name, value } = event.target;
+        console.log(name);
+        console.log(value);
         this.setState({
             [name]: value,
             hasSearched: false,
             dataOnFile: false
         });
+
         console.log(this.state);
     };
 
     handleSearch = event => {
+        console.log("Searching");
+        console.log(this.state);
         event.preventDefault();
         // this.hasSearched = true;
         

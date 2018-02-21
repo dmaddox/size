@@ -1,0 +1,19 @@
+body {
+	font-family: 'Lato', sans-serif;
+	color: #000;
+}
+
+h1 {
+	font-family: 'Bellefair', serif;
+	color: #000;
+}
+fieldset {
+	border: none;
+}
+
+legend {
+    display: block;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: none;
+}
