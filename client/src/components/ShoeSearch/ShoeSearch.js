@@ -35,9 +35,6 @@ const ShoeSearch = props =>
                 <option value="5"> Vans</option>
             </select>
         </fieldset>
-
-
-
        
     </div>
 

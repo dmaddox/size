@@ -20,7 +20,6 @@ const Search = props =>
                     <option value="dresses"> Dresses</option>
                 </select>
             </fieldset>
-            <br/>
 
             {props.type === "shoes" 
                 ? <ShoeSearch handleInputChange={props.handleInputChange} /> 
@@ -28,9 +27,11 @@ const Search = props =>
                     ? <DressSearch handleInputChange={props.handleInputChange} /> 
                     : "" }
 
-                    <button className="searchButton" type="submit" onClick={props.handleSearch}>
-            Submit
-        </button>
+            <fieldset>
+                <button className="searchButton" type="submit" onClick={props.handleSearch}>
+                    Submit
+                </button>
+            </fieldset>
 
             <SignIn_SignOut />
 
