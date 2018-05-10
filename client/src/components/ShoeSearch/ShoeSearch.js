@@ -4,21 +4,32 @@ import SignIn_SignOut from "../SignIn_SignOut";
 
 const ShoeSearch = props =>
 	<div>
-        <fieldset>
-            <label>What is your gender?</label><br />
-            <input className = "radio" type="radio" name="gender" value="male" onChange={props.handleInputChange}/> Male
-            <input className = "radio" type="radio" name="gender" value="female" onChange={props.handleInputChange}/> Female
-            <input className = "radio" type="radio" name="gender" value="other" onChange={props.handleInputChange}/> Other
+        <fieldset className="form-group">
+            <label>
+              Are you shopping for men's or women's sizes?
+            </label>
+            <br />
+
+        {/* <div className="btn-group btn-group-toggle" data-toggle="buttons"> */} 
+            <div className="gender-toggle">
+                <input type="radio" name="gender" value="male" id="gender-male"  onClick={props.handleInputChange} />
+                <label for="gender-male">Male</label>
+                    
+                <input type="radio" name="gender" value="female" id="gender-female"  onClick={props.handleInputChange} />
+                <label for="gender-female">Female</label>
+            </div>
+
+
         </fieldset>
 
-        <fieldset>
-        <label for="footlength">How long is your foot (in inches)?</label><br />
-        <input placeholder='' type="text" className="footSize" id="footlength" name="shoe" onChange={props.handleInputChange}></input>
+        <fieldset className="form-group">
+        <label htmlFor="footlength">How long is your foot (in inches)?</label><br />
+        <input placeholder='' type="text" className="footSize form-control" id="footlength" name="shoe" onChange={props.handleInputChange}></input>
         </fieldset>
 
-        <fieldset>
-           <label for="brand">If you want to specify a brand, select one below.</label><br />
-            <select className="selection" id="brand" name="brand" onChange={props.handleInputChange}>
+        <fieldset className="form-group">
+           <label htmlFor="brand">If you want to specify a brand, select one below.</label><br />
+            <select className="selection form-control" id="brand" name="brand" onChange={props.handleInputChange}>
                 <option value="">  Brand (optional)</option>
                 <option value="13"> BCBG </option>
                 <option value="3"> Adidas</option>

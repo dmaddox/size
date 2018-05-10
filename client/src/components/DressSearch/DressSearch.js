@@ -6,8 +6,8 @@ const DressSearch = props =>
 	
     <div>       
 
-        <fieldset>
-            <label for="chestWidth">
+        <fieldset className="form-group">
+            <label htmlFor="chestWidth">
                 What is your chest measurement (in inches)?
             </label>
             <br />
@@ -20,8 +20,8 @@ const DressSearch = props =>
             </input>
         </fieldset>
 
-        <fieldset>
-            <label for="chestWidth">
+        <fieldset className="form-group">
+            <label htmlFor="chestWidth">
                 What is your waist measurement (in inches)?
             </label>
             <br />
@@ -34,8 +34,8 @@ const DressSearch = props =>
             </input>
         </fieldset>
 
-        <fieldset>
-            <label for="chestWidth">
+        <fieldset className="form-group">
+            <label htmlFor="chestWidth">
                 What is your hip measurement (in inches)?
             </label>
             <br />
@@ -48,8 +48,8 @@ const DressSearch = props =>
             </input>
         </fieldset>
 
-        <fieldset>
-            <label for="brand">
+        <fieldset className="form-group">
+            <label htmlFor="brand">
                 If you want to specify a brand, select one below.
             </label>
             <br />

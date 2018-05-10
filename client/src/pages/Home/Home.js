@@ -38,20 +38,10 @@ class Home extends Component {
         })
         .catch(err => console.log(err))
     };
-
-    handleSelect = option => {
-        console.log(option);
-        this.setState({
-            type: option
-        })
-
-    };
     
     handleInputChange = event => {
-        console.log(event.target);
         const { name, value } = event.target;
-        console.log(name);
-        console.log(value);
+        console.log(name +": "+ value);
         this.setState({
             [name]: value,
             hasSearched: false,
@@ -138,7 +128,7 @@ class Home extends Component {
         return (
             <div className={(noSearch) ? "" : "afterSearchConatiner"}>
                 <div className={(noSearch) ? "beforeSearch" : "afterSearch"}>
-                    <Search type={this.state.type} handleSearch={this.handleSearch} handleInputChange={this.handleInputChange} />
+                    <Search type={this.state.type} gender={this.state.gender} handleSearch={this.handleSearch} handleInputChange={this.handleInputChange} />
                 </div> 
                 <div className="h3">{this.state.errorMessage}</div>
                 {(!noSearch ? <Sizes results={this.state.results}/> : "")}

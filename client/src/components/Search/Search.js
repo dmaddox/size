@@ -12,9 +12,9 @@ const Search = props =>
                 <h1>Size</h1>
             </Link>
 
-            <fieldset>
+            <fieldset className="form-group">
                 <label>What do you need a size for?</label><br />
-                <select className="selection" id="clothingtype" name="type" onChange={props.handleInputChange}>
+                <select className="selection form-control" id="clothingtype" name="type" onChange={props.handleInputChange}>
                     <option> Select clothing type. </option>
                     <option value="shoes"> Shoes</option>
                     <option value="dresses"> Dresses</option>
@@ -22,12 +22,12 @@ const Search = props =>
             </fieldset>
 
             {props.type === "shoes" 
-                ? <ShoeSearch handleInputChange={props.handleInputChange} /> 
+                ? <ShoeSearch handleInputChange={props.handleInputChange} gender={props.gender} /> 
                 : ( props.type === "dresses" )
                     ? <DressSearch handleInputChange={props.handleInputChange} /> 
                     : "" }
 
-            <fieldset>
+            <fieldset className="form-group">
                 <button className="searchButton" type="submit" onClick={props.handleSearch}>
                     Submit
                 </button>
