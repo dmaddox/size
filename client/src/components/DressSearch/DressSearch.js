@@ -1,19 +1,22 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import SignIn_SignOut from "../SignIn_SignOut";
+// import { Link } from "react-router-dom";
+// import SignIn_SignOut from "../SignIn_SignOut";
 
 const DressSearch = props =>
 	
     <div>       
 
         <fieldset className="form-group">
+            <p htmlFor="group-title">
+                In the following measurements (in inches):
+            </p>
             <label htmlFor="chestWidth">
-                What is your chest measurement (in inches)?
+                Chest: 
             </label>
             <br />
-            <input placeholder="Chest (in inches)" 
+            <input placeholder="" 
                 type="text" 
-                className="footSize" 
+                className="form-control inch_input" 
                 id="chestWidth" 
                 name="bust" 
                 onChange={props.handleInputChange}>
@@ -21,13 +24,12 @@ const DressSearch = props =>
         </fieldset>
 
         <fieldset className="form-group">
-            <label htmlFor="chestWidth">
-                What is your waist measurement (in inches)?
+            <label htmlFor="waistWidth">
+                Waist: 
             </label>
-            <br />
-            <input placeholder="Waist (in inches)" 
+            <input placeholder="" 
                 type="text" 
-                className="footSize" 
+                className="form-control inch_input" 
                 id="waistWidth" 
                 name="waist" 
                 onChange={props.handleInputChange}>
@@ -35,13 +37,12 @@ const DressSearch = props =>
         </fieldset>
 
         <fieldset className="form-group">
-            <label htmlFor="chestWidth">
-                What is your hip measurement (in inches)?
+            <label htmlFor="hipWidth">
+                Hips: 
             </label>
-            <br />
-            <input placeholder="Hip (in inches)" 
+            <input placeholder="" 
                 type="text" 
-                className="footSize" 
+                className="form-control inch_input" 
                 id="hipWidth" 
                 name="hips" 
                 onChange={props.handleInputChange}>

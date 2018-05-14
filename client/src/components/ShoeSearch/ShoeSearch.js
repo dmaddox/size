@@ -6,7 +6,7 @@ const ShoeSearch = props =>
 	<div>
         <fieldset className="form-group">
             <label>
-              Are you shopping for men's or women's sizes?
+              Gender:
             </label>
             <br />
 
@@ -23,7 +23,7 @@ const ShoeSearch = props =>
         </fieldset>
 
         <fieldset className="form-group">
-        <label htmlFor="footlength">How long is your foot (in inches)?</label><br />
+        <label htmlFor="footlength">Foot length in inches:</label><br />
         <input placeholder='' type="text" className="footSize form-control" id="footlength" name="shoe" onChange={props.handleInputChange}></input>
         </fieldset>
 

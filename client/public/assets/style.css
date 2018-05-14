@@ -17,8 +17,14 @@ legend {
     padding-right: 2px;
     border: none;
 }
+.group-title {
+  display: block;
+}
 .form-control {
   width: 350px;
+}
+.inch_input {
+  width: 150px;
 }
 .gender-toggle input {
     position: absolute !important;

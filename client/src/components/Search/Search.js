@@ -13,7 +13,7 @@ const Search = props =>
             </Link>
 
             <fieldset className="form-group">
-                <label>What do you need a size for?</label><br />
+                <label>I am shopping for:</label><br />
                 <select className="selection form-control" id="clothingtype" name="type" onChange={props.handleInputChange}>
                     <option> Select clothing type. </option>
                     <option value="shoes"> Shoes</option>
